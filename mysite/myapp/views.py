@@ -1,3 +1,5 @@
+from profile import Profile
+
 from django.shortcuts import render
 from django.template.context_processors import request
 from rest_framework import generics
@@ -16,6 +18,6 @@ class TestTemplate(generics.ListAPIView):
     template_name = 'profile_list.html'
 
     def get(self, request):
-       # queryset = Profile.objects.all()
-        return render(request,'test.html',{'first_name':'Oleg','last_name':'Olegov'})
+       queryset = Chawo.objects.all()
+       return render(request,'test.html',{'posts':queryset})
        #Response({'profiles': queryset})

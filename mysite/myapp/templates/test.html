@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-My first name is {{ first_name }}. My last name is {{ last_name }}.
+    {% for post in posts %}
+    <div>
+        <h2>{{post.quest}}</h2>
+        <p>{{post.ans}}</p>
+    </div>
+    {% endfor %}
 </body>
 </html>
