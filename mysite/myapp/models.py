@@ -8,4 +8,9 @@ class Chawo(models.Model):
         return f'question: {self.quest}, ' \
                f'answer: {self.ans}, ' \
 
+
+
+
+
+
 # Create your models here.

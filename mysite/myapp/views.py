@@ -11,7 +11,7 @@ from .serializers import ChawoSerializer, Chawo
 
 class ChawoView(generics.ListAPIView):
     serializer_class = ChawoSerializer
-
+    queryset = Chawo.objects.all()
 class TestTemplate(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'profile_list.html'
