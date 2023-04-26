@@ -19,5 +19,5 @@ class TestTemplate(generics.ListAPIView):
 
     def get(self, request):
        queryset = Chawo.objects.all()
-       return render(request,'test.html',{'posts':queryset})
+       return render(request,'index.html',{'posts':queryset,'answ':'TODO'})
        #Response({'profiles': queryset})
