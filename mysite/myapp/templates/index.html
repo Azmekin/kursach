@@ -32,14 +32,16 @@
 <ul class="nav flex-column">
      {% for post in posts %}
     <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="#">{{post.quest}}</a>
+    <a class="nav-link" aria-current="page" href="/help/?a={{post.id}}"  >{{post.quest}}</a>
   </li>
     {% endfor %}
 </ul>
 </section>
 <section class="main_text">
 <div>
-  <p>{{answ}}</p>
+         {% for answer in answ %}
+  <p>{{answer.ans}}</p>
+        {% endfor %}
 </div>
 
 </section>
