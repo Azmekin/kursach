@@ -66,8 +66,11 @@
 
         <section class="column-goods">
         {% for good in goods %}
-                        {% if forloop.counter0|divisibleby:5 == 1 %}
-        <div class="goods-card">
+                                         {% if forloop.counter0|divisibleby:4 == 1 and forloop.counter0 != 0 %}
+            </section>
+        {% endif %}
+                        {% if forloop.counter0|divisibleby:4 == 1 %}
+        <section class="goods-card">
          {% endif %}
 
           <div class="card-good">
@@ -78,10 +81,8 @@
             <div class="s-info">Рейтинг: {{user.mark}}</div>
 
                 </div>
-                             {% if forloop.counter1|divisibleby:3 == 1%}
-            </div>
-        {% endif %}
         {% endfor %}
+        </section>
     </section>
     </section>
     <footer>
