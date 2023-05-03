@@ -157,7 +157,7 @@ vertical-align: middle;
 .goods-card{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height:fit-content;
 }
 .card-good{
