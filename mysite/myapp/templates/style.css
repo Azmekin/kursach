@@ -3,6 +3,10 @@ background-color: lightgrey;
 justify-content:center;
 padding-top: 15px;
 }
+.imggd{
+height: 200px;
+width: 200px;
+}
 .d-nav{
 margin-left:0px;
 width:100%;
@@ -203,3 +207,4 @@ footer{
 .rnd-btn{
     border-radius: 5px;
 }
+
