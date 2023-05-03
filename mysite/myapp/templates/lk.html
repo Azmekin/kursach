@@ -63,33 +63,26 @@
 </section>
 
     <section class="main-content">
+
+        <section class="column-goods">
         {% for good in goods %}
+                        {% if forloop.counter0|divisibleby:5 == 1 %}
+        <div class="goods-card">
+         {% endif %}
 
-     {% if loop.index|divisibleby:2 == 1 %}
-        <section class="goods-card">
           <div class="card-good">
             <img class="photocard" src="{{good.image}}">
             <div class="f-info">
               <div class="namecard">{{good.Name}}</div><div class="cost">Цена {{good.cost}}</div>
             </div>
             <div class="s-info">Рейтинг: {{user.mark}}</div>
-          </div>
-            </section>
-    {% else %}
-        <section class="goods-card">
-          <div class="card-good">
-            <img class="photocard" src="{{good.image}}">
-            <div class="f-info">
-              <div class="namecard">{{good.Name}}</div><div class="cost">Цена {{good.cost}}</div>
-            </div>
-            <div class="s-info">Рейтинг: {{user.mark}}</div>
-          </div></section>
 
-             {% endif %}
-         {% if loop.index|divisibleby:2 == 1 %}
-        </section>
-             {% endif %}
+                </div>
+                             {% if forloop.counter1|divisibleby:3 == 1%}
+            </div>
+        {% endif %}
         {% endfor %}
+    </section>
     </section>
     <footer>
 Студенческий проект - Стеганцев
