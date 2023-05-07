@@ -75,6 +75,13 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        "mysite.custom_auth.JWTAuthentication",
+    )
+}
+
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
@@ -125,7 +132,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MEDIA_ROOT = 'C:/Users/sds/PycharmProjects/kursach/mysite/myapp/templates'
+MEDIA_ROOT = 'C:\\Users\\Dmitry\\PycharmProjects\\kursach\\mysite\\myapp\\templates'
 MEDIA_URL = '/media/'
 
 # Default primary key field type
