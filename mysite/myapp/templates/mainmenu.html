@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><html>
-    <head>
-    <title>Test</title>
-        <link href="C:\Users\sds\PycharmProjects\kursach\mysite\myapp\templates\style.css" rel="stylesheet">
+    <title>
+    Test</title>
+        <link href="/media/style.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
@@ -40,9 +39,12 @@
             </svg>
         </div>-->
         <div class="input-group mb-3">
-          <form >
-          <input type="text" class="form-control" placeholder="Поиск" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">        <svg  width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <form style="
+    width: 95%;
+    display: flex;
+">
+          <input type="text" class="form-control" name="search" placeholder="Поиск" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">        <svg  width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line y1="-0.5" x2="15.0385" y2="-0.5" transform="matrix(0.517192 0.855869 -0.743859 0.668337 7.22223 8.12903)" stroke="black"/>
             <ellipse cx="5.55556" cy="6.43548" rx="5.55556" ry="6.43548" fill="#D9D9D9"/>
             </svg> </button>
@@ -51,15 +53,16 @@
     </section>
     <section class="main-content">
     <section class="left-menu-main">
+        <form>
         <ul class="nav flex-column">
           <li class="nav-item">
             <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-              <label class="btn btn-outline-dark" for="vbtn-radio1">Photobank</label>
-              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-              <label class="btn btn-outline-dark" for="vbtn-radio2">Audiobank</label>
-              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-              <label class="btn btn-outline-dark" for="vbtn-radio3">3D-bank</label>
+              <input type="radio" class="btn-check" value="1" name="vbtn_radio" id="vbtn_radio1" autocomplete="off" checked>
+              <label class="btn btn-outline-dark" for="vbtn_radio1">Photobank</label>
+              <input type="radio" class="btn-check" value="2" name="vbtn_radio" id="vbtn_radio2" autocomplete="off">
+              <label class="btn btn-outline-dark" for="vbtn_radio2">Audiobank</label>
+              <input type="radio" class="btn-check" value="3" name="vbtn_radio" id="vbtn_radio3" autocomplete="off">
+              <label class="btn btn-outline-dark" for="vbtn_radio3">3D-bank</label>
             </div>
           </li>
           <li class="space">
@@ -69,20 +72,20 @@
             <div class="type-found">
             <div class="head-found">Рейтинг</div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="5" name="rate" id="flexCheckDefault1">
+              <label class="form-check-label" for="flexCheckDefault1">
                 От 5 звезд
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="4" name="rate" id="flexCheckDefault2">
+              <label class="form-check-label" for="flexCheckDefault2">
                 От 4 звезд
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
+              <input class="form-check-input" type="checkbox" value="5" name="rate" id="flexCheckChecked3" checked>
+              <label class="form-check-label" for="flexCheckChecked3">
                 От 3 звезд
               </label>
             </div>
@@ -91,96 +94,53 @@
           <li class="space">
 
           </li>
-          <li class="nav-item">
             <div class="type-found">
-            <div class="head-found">Тип</div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Обмен
-              </label>
+                <div class="head-found">Тип</div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="1" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Обмен
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="0" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Покупка
+                    </label>
+                </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-              <label class="form-check-label" for="flexRadioDefault2">
-                Покупка
-              </label>
-            </div>
-          </li>
-          <li class="space">
+
+                <li class="space">
 
           </li>
           <li class="space">
 
           </li>
         </ul>
+            <button class="btn btn-dark"  type="submit">Подтвердить</button>
+            </form >
         </section>
-        <section class="column-goods">
+                <section class="column-goods">
+        {% for good in goods %}
+                                         {% if forloop.counter0|divisibleby:4 == 1 and forloop.counter0 != 0 %}
+            </section>
+        {% endif %}
+                        {% if forloop.counter0|divisibleby:4 == 1 %}
         <section class="goods-card">
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
+         {% endif %}
 
+          <div class="card-good">
+            <img class="photocard" src="{{good.image}}">
+            <div class="f-info">
+              <div class="namecard">{{good.0}}</div><div class="cost">Цена {{good.1}}</div>
+            </div>
+            <!--div class="s-info">Рейтинг: {{user.mark}}</--div-->
+
+                </div>
+        {% endfor %}
         </section>
-
-        <section class="goods-card">
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-          <div class="card-good">
-            <div class="photocard">Photoplace</div>
-            <div class="f-info">
-              <div class="namecard">Название</div><div class="cost">Цена</div>
-            </div>
-            <div class="s-info">Рейтинг продавца</div>
-          </div>
-
-        </section>
-      </section>
     </section>
+        </section>
     <footer>
 Студенческий проект - Стеганцев
     </footer>

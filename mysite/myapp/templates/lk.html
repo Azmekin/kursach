@@ -22,10 +22,10 @@
     <a class="nav-link" href="#">Избранное</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="#">Личный кабинет</a>
+    <a class="nav-link active" href="/lk">Личный кабинет</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link">Помощь</a>
+    <a class="nav-link" href="/help">Помощь</a>
   </li>
 </ul>
 </div>
@@ -36,7 +36,8 @@
     <!--div class="photocard">Photoplace</div-->
     <img class="photocard"  style="" src="{{users.img_res}}">
   <div class="nick">{{user.owner}}</div>
-  <button class="rnd-btn"> Редактировать данные профиля</button>
+    <a href="owner_c">
+  <button class="rnd-btn"> Редактировать данные профиля</button></a>
 </div>
 <div class="secondpart">
 <h1> Кошелек</h1>
@@ -47,11 +48,14 @@
 
 <br>
 <br>
-<button class="rnd-btn"> Редактировать данные кошелька</button>
+    <a href="vallet_c">
+        <button class="rnd-btn"> Редактировать данные кошелька</button></a>
 </div>
 <div class="thirdpart">
-
-  <button class="rnd-btn"> Создать объявление</button>
+<a href="good_c">
+    <button class="rnd-btn" style="
+    width: -webkit-fill-available;
+"> Создать объявление</button></a>
   <br>
   <button class="rnd-btn"> Чат</button>
   <br>
