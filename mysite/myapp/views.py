@@ -97,9 +97,9 @@ class MainTemplate(generics.ListAPIView):
             vbtn_radio=q['vbtn_radio']
         except Exception as e:
             vbtn_radio = 1
-
+        print(vbtn_radio)
         try:
-            if q['flexRadioDefault'] == 1:
+            if q['flexRadioDefault'] == '1':
                 flexRadioDefault = True
             else:
                 flexRadioDefault = False
@@ -120,16 +120,16 @@ class MainTemplate(generics.ListAPIView):
         queryset = list(Goods.objects.values_list('Name','cost','image','owner','sold_type','IS_3D','IS_2D','IS_AUDIO'))
         GS=[]
         param=''
-        if vbtn_radio==1:
+        if vbtn_radio=='1':
             param=6
-        elif vbtn_radio==2:
+        elif vbtn_radio=='2':
             param=7
         else:
             param=5
 
         for i in queryset:
             print (i)
-            if i[4]==True and i[param]==True and search in i[0]:
+            if i[4]==flexRadioDefault and i[param]==True and search in i[0]:
                 GS.append(i)
 
         #GS=queryset
